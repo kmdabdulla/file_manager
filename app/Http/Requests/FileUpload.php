@@ -25,7 +25,7 @@ class FileUpload extends FormRequest
     {
         return [
             'files' => 'required_without:fileId',
-            'fileId' => 'required_without:files',
+            'fileId' => 'sometimes|numeric',
         ];
     }
 
@@ -39,7 +39,7 @@ class FileUpload extends FormRequest
     public function messages()
     {
         return [
-            'files.required' => 'Please choose file(s) before uploading.',
+            'files.required_without' => 'Please choose file(s) before uploading.',
         ];
     }
 
