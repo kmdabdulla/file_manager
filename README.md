@@ -27,7 +27,7 @@ Application can be accessed [here](https://www.file.mohamedabdulla.com)
 ## Security measures
 1. Laravel framework support for CSRF prevention is used. 
 2. Proper sanitization, validation and output encoding are used to prevent SQL injection and XSS.
-3. AES-256-CBC is currently used for encryption. Some authenticated encryption algorithms like AES-256-GCM will be used in the future (warranted investigation).    
+3. AES-256-CBC is currently used for encryption. Some authenticated encryption algorithms like AES-256-GCM will be used in the future (further investigation needed).    
  
 
 ## TO DO
