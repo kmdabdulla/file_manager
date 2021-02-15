@@ -1,5 +1,5 @@
 ﻿
-# Simple File Management System
+# Secure File Management System
 
 The application provides basic file backup and encryption service. Basic user authentication is provided. Currently, the application supports encrypted file uploads, listing the uploaded files, deleting and downloading the decrypted files. 
 
@@ -40,7 +40,7 @@ Application can be accessed [here](https://www.file.mohamedabdulla.com)
 ## Author
 Mohamed Abdulla
 
-LinkedIn: [Abdulla](https://www.linkedin.com/in/kmdabdulla)
+LinkedIn: [Abdulla](https://www.linkedin.com/in/kmdabdulla)  
 Website: [www.mohamedabdulla.com](https://www.mohamedabdulla.com)
 
 ## Acknowledgments
