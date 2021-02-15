@@ -36,7 +36,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         @if (isset(Auth::user()->name))
         <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
+          <a href="fileManager" class="d-block">{{Auth::user()->name}}</a>
         </div>
         @endif
       </div>
