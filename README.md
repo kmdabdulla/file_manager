@@ -40,7 +40,7 @@ Application can be accessed [here](https://www.file.mohamedabdulla.com)
 ## Author
 Mohamed Abdulla
 
-LinkedIn: [Abdulla](https://www.linkedin.com/in/kmdabdulla)  
+LinkedIn: [www.linkedin.com/in/kmdabdulla](https://www.linkedin.com/in/kmdabdulla)  
 Website: [www.mohamedabdulla.com](https://www.mohamedabdulla.com)
 
 ## Acknowledgments
