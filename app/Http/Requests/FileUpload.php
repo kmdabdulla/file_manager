@@ -29,6 +29,13 @@ class FileUpload extends FormRequest
         ];
     }
 
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'fileId' => filter_var($this->fileId,FILTER_SANITIZE_NUMBER_INT),
+        ]);
+    }
+
     public function messages()
     {
         return [

@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-Use App\Models\User;
-//use DataTables;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,34 +12,26 @@ Use App\Models\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Top level Route
 Route::get('/', function () {
     return view('login');
 });
-Route::get('navbar', function () {
-    return view('layouts/navbar');
-})->middleware('auth');
-//Route::view('navbar', 'layouts/navbar')->middleware('auth');
+
+//Authentication Routes
 Route::get('login', function () {
     if (Auth::check()) {
         return view('filemanager');
-        //redirect('fileManager');
     }
     return view('login');
 })->name('login');
-//Route::view('login', 'login')->name('login');
 Route::get('register', function () {
     if (Auth::check()) {
         return view('filemanager');
-        //redirect('fileManager');
     }
     return view('register');
 });
-Route::view('forgotpassword', 'forgotpassword');
-Route::get('registerGmail', [App\Http\Controllers\LoginController::class, 'registerGmail']);
 Route::post('registerEmail', [App\Http\Controllers\LoginController::class, 'registerEmail']);
 Route::post('emailLogin', [App\Http\Controllers\LoginController::class, 'emailLogin']);
-Route::post('forgottenPassword', [App\Http\Controllers\LoginController::class, 'forgottenPassword']);
 Route::post('userLogout', [App\Http\Controllers\LoginController::class, 'userLogout']);
 
 //File Manager Routes

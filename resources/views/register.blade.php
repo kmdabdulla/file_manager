@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 </head>
 <body class="hold-transition register-page">
+     <!--error display div -->
     @if(isset($errors) && count($errors) > 0 )
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -28,11 +29,11 @@
     </ul>
 </div>
 @endif
+ <!--registration dialog -->
 <div class="register-box">
   <div class="register-logo">
     <b>File Manager</b>
   </div>
-
   <div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
@@ -72,26 +73,16 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <!--<div class="icheck-primary">
-              <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-              <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
-              </label>
-            </div>-->
           </div>
-          <!-- /.col -->
             <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-          <!-- /.col -->
         </div>
       </form>
 
       <div class="social-auth-links text-center">
       <a href="/" class="text-center">I have my login details</a>
     </div>
-    <!-- /.form-box -->
-  </div><!-- /.card -->
+  </div>
 </div>
-<!-- /.register-box -->
 
 <!-- jQuery -->
 <script src="{{ asset ('plugins/jquery/jquery.min.js')}}"></script>

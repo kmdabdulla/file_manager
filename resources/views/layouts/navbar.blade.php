@@ -1,3 +1,5 @@
+ <!--fixed layout to be used for the views across the application -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,34 +27,22 @@
 <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
 <!-- summernote -->
 <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
-  <style>
-    div.txtbreak {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-</style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+
 <div class="wrapper">
-  <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         @if (isset(Auth::user()->name))
-        <div class="info txtbreak">
+        <div class="info">
           <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
         @endif
       </div>
-
-      <!-- Sidebar Menu -->
+ <!--side panel items -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
             <li class="nav-item">
                 <a href="fileManager" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
@@ -68,22 +58,17 @@
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </aside>
-
+ <!--display the main content depending upon the view -->
   <div class="content-wrapper">
     @yield('content')
   </div>
 
-  <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
   </aside>
-  <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
+
 
 <!-- jQuery -->
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>

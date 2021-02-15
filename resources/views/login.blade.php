@@ -16,6 +16,7 @@
 
 </head>
 <body class="hold-transition login-page">
+     <!--error display div -->
     @if(isset($errors) && count($errors) > 0 )
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -28,15 +29,14 @@
         </ul>
     </div>
     @endif
+     <!--login/create account dialog -->
 <div class="login-box">
   <div class="login-logo">
     <b>File Manager</b></a>
   </div>
-  <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Login</p>
-
       <form action="emailLogin" method="post">
         <div class="input-group mb-3">
           <input type="email" name="email" class="form-control" placeholder="Email">
@@ -56,42 +56,22 @@
         </div>
         <div class="row">
             <div class="col-8">
-              <!--<div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                  Remember Me
-                </label>
-              </div>-->
             </div>
-
-          <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
         </div>
-          <!-- /.col -->
       </form>
-
-          <p class="mb-1">
-              <a href="forgotpassword">Forgot Password?</a>
-            </p>
-            <p class="mb-0">
-              <a href="register" class="text-center">Create a New Account</a>
-            </p>
-
-
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
-        <a href="registerGmail" class="btn btn-block btn-danger">
-          <i class="fab fa-google mr-2"></i> Sign in using Google
+        <a href="register" class="btn btn-block btn-info">
+          <i class="fas fa-user-edit mr-2"></i> Create a New Account
         </a>
       </div>
-      <!-- /.social-auth-links -->
     </div>
-    <!-- /.login-card-body -->
   </div>
 </div>
-<!-- /.login-box -->
+
 
 <!-- jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>

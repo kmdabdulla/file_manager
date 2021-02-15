@@ -9,12 +9,25 @@ class FileUploads extends Model
 {
     use HasFactory;
 
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'original_name',
         'encrypted_file_path',
         'user_id',
+        'created_at',
+        'updated_at',
     ];
 
+     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
     protected $hidden = [
         'encrypted_file_path',
     ];

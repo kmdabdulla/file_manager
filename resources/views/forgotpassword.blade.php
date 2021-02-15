@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Forgot Password</title>
+  <title>Forgot Password</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,14 +16,9 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <!--<div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
-  </div>-->
-  <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Enter Email to receive new password.</p>
-
       <form action="forgottenPassword" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
@@ -37,7 +32,6 @@
           <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block">Request New Password</button>
           </div>
-          <!-- /.col -->
         </div>
       </form>
 
@@ -48,10 +42,8 @@
         <a href="register" class="text-center">Create a New Acoount</a>
       </p>
     </div>
-    <!-- /.login-card-body -->
   </div>
 </div>
-<!-- /.login-box -->
 
 <!-- jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>
