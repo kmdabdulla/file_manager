@@ -34,8 +34,7 @@ Application can be accessed [here](https://www.file.mohamedabdulla.com)
 1. User management activities such as change email, forget password and OAuth support etc. 
 2. Online File view/modification.
 3. User and File access rights.
-4. Upload File duplicate checks. Right now the application treats duplicate files as separate versions.
-5. Efficient way to upload and encrypt larger files.
+4. Efficient way to upload and encrypt larger files.
 
 ## Author
 Mohamed Abdulla

@@ -11,20 +11,16 @@
   </section>
 
   <section class="content">
-      <!--error display div -->
-        <div class="col-md-3">
-            @if(isset($errors) && count($errors) > 0 )
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+<!-- error/success message div -->
+@if(session()->has('response') || (isset($errors) && count($errors) > 0))
+    <div class="alert alert-{{session('response.status') ?? 'danger'}} alert-dismissible fade show" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <ul class="p-0 m-0" style="list-style: none;">
-            @foreach($errors->all() as $error)
-            <li>{{$error}}</li>
-            @endforeach
-        </ul>
+        {{ session('response.message') ?? $errors->first() }}
     </div>
-    @endif
+@endif
+<div class="col-md-3">
      <!--upload file form -->
                 <form action="uploadFiles" method="post" enctype="multipart/form-data">
                     @csrf
@@ -48,7 +44,7 @@
           <div class="card-header">
             <h3 class="card-title">Uploaded Files</h3>
           </div>
-          <div class="card-body table-responsive p-0" style="height: 200px;">
+          <div class="card-body table-responsive p-0" style="height: 500px;">
             <table class="table table-head-fixed text-nowrap">
                 <thead>
                     <tr>
