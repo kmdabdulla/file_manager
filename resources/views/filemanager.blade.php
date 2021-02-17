@@ -59,11 +59,11 @@
                         <td>{{$file->original_name}}</td>
                         <td>{{$file->created_at}}</td>
                         <td> <div style="display:none"><form action="downloadFiles" method="post">@csrf<input name="fileId" value={{$file->id}}/></div><button class="btn btn-info .btn-sm">
-                        <span class="fa fa-download"></span> Download
+                        <span class="fa fa-download"></span>
                     </button> </form>
-                    <div style="display:none"><form action="deleteFiles" method="post">@csrf<input name="fileId" value={{$file->id}}/></div><button class="btn btn-danger .btn-sm">
-                        <span class="fa fa-trash"></span> Delete
-                    </button> </form>
+                    <button id="deleteButton" class="btn btn-danger .btn-sm" data-info="{{$file->id}}, {{$file->original_name}}" data-toggle="modal" data-target="#deleteModal">
+                        <span class="fa fa-trash"></span>
+                    </button>
                         </td>
                     </tr>
                 @endforeach
@@ -75,5 +75,31 @@
     </div>
 </div>
 @endif
+
+<!-- delete model -->
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Delete Confirmation</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="deleteFiles" method="post">@csrf
+                    <input id="deleteFileId" type="hidden" name="fileId" value=""/>
+              <p>Are you sure about deleting <span id="deleteFileName"></span>?</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Delete</button>
+            </div>
+        </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
 </section>
 @endsection
