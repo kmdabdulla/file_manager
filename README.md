@@ -1,9 +1,7 @@
 ﻿
 # Secure File Management System
 
-The application provides basic file backup and encryption service. Basic user authentication is provided. Currently, the application supports encrypted file uploads, listing the uploaded files, deleting and downloading the decrypted files. 
-
-Application can be accessed [here](https://www.file.mohamedabdulla.com)
+The application provides basic file backup and encryption service. Basic user authentication is provided. Currently, the application supports encrypted file uploads, listing the uploaded files, deleting and downloading the decrypted files.
 
 ## Built With
 
@@ -35,13 +33,3 @@ Application can be accessed [here](https://www.file.mohamedabdulla.com)
 2. Online File view/modification.
 3. User and File access rights.
 4. Efficient way to upload and encrypt larger files.
-
-## Author
-Mohamed Abdulla
-
-LinkedIn: [www.linkedin.com/in/kmdabdulla](https://www.linkedin.com/in/kmdabdulla)  
-Website: [www.mohamedabdulla.com](https://www.mohamedabdulla.com)
-
-## Acknowledgments
-* Laravel Support Forums
-* Stack OverFlow Community
